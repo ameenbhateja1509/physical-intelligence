@@ -1,0 +1,54 @@
+{
+    "experiment": "PI-001-WORLD-MODEL",
+    "environment": "2D simplified point-mass vehicle",
+    "training_seed": 42,
+    "training_samples": 20000,
+    "test_samples_per_seed": 2000,
+    "test_seeds": [
+        101,
+        202,
+        303
+    ],
+    "metrics_note": "Position MSE and velocity MSE have different units. Overall MSE is a convenience statistic and should not be interpreted as a dimensionally homogeneous physical error.",
+    "results": [
+        {
+            "test_seed": 101,
+            "physics_baseline": {
+                "position_mse": 0.0,
+                "velocity_mse": 0.0,
+                "overall_mse": 0.0
+            },
+            "learned_world_model": {
+                "position_mse": 0.0020963231595719735,
+                "velocity_mse": 0.0006995369550653992,
+                "overall_mse": 0.0013979300573186862
+            }
+        },
+        {
+            "test_seed": 202,
+            "physics_baseline": {
+                "position_mse": 0.0,
+                "velocity_mse": 0.0,
+                "overall_mse": 0.0
+            },
+            "learned_world_model": {
+                "position_mse": 0.0020932463180464954,
+                "velocity_mse": 0.0007331764267036971,
+                "overall_mse": 0.0014132113723750962
+            }
+        },
+        {
+            "test_seed": 303,
+            "physics_baseline": {
+                "position_mse": 0.0,
+                "velocity_mse": 0.0,
+                "overall_mse": 0.0
+            },
+            "learned_world_model": {
+                "position_mse": 0.002135282845207,
+                "velocity_mse": 0.0007087135758481129,
+                "overall_mse": 0.0014219982105275566
+            }
+        }
+    ]
+}
