@@ -16,6 +16,7 @@ A simplified 2D vehicle simulation.
 ### Models
 - B0: Analytical physics baseline
 - B1: Existing machine-learning model (Random Forest)
+- B2: Learned neural transition model (MLPRegressor)
 
 ### Input
 Current position, velocity, acceleration and time interval.
@@ -39,4 +40,10 @@ transfer to other machine categories.
 2. Industrial machine
 
 ### Current status
-Initial implementation.
+- Vehicle simulation and analytical baseline implemented.
+- Random Forest baseline evaluated on three held-out random seeds.
+- Shared physical-state schema and machine examples implemented.
+- Neural world-model implementation and tests added; execution and metrics still need verification in Codespaces.
+
+### Important limitations
+The current vehicle is a simplified 2D point-mass system. The learned model predicts one-step transitions from simulator-generated data; it does not yet demonstrate general physical understanding or cross-machine transfer. Position MSE and velocity MSE should be interpreted separately because they have different physical units.
