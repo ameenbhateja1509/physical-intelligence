@@ -1,0 +1,27 @@
+{
+    "experiment": "PI-001-TRANSFER-001",
+    "source_domain": "ideal 2D point-mass vehicle",
+    "target_domain": "2D point-mass robot with linear velocity drag",
+    "source_training_samples": 20000,
+    "target_training_samples": 5000,
+    "test_samples": 2000,
+    "robot_drag": 0.25,
+    "metrics": {
+        "vehicle_model_zero_shot": {
+            "position_mse": 0.0020751650024359992,
+            "velocity_mse": 0.0037739199694806908,
+            "overall_mse": 0.0029245424859583448
+        },
+        "robot_model_target_trained": {
+            "position_mse": 0.014961940038964873,
+            "velocity_mse": 0.004897996994977583,
+            "overall_mse": 0.009929968516971227
+        },
+        "robot_analytical_physics": {
+            "position_mse": 0.0,
+            "velocity_mse": 0.0,
+            "overall_mse": 0.0
+        }
+    },
+    "interpretation_limit": "A synthetic transfer benchmark between related point-mass models; not evidence of transfer to real robots or general physical intelligence."
+}
