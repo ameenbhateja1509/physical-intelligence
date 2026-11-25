@@ -60,3 +60,16 @@ The analytical physics baseline recorded zero error because its equations match 
 
 ### Important limitations
 The current vehicle is a simplified 2D point-mass system. The learned model predicts one-step transitions from simulator-generated data; it does not yet demonstrate general physical understanding or cross-machine transfer. Position MSE and velocity MSE should be interpreted separately because they have different physical units.
+
+
+### PI-001 vehicle-to-robot transfer results
+
+The source model was trained on 20,000 ideal-vehicle transitions. The target-only robot model was trained on 5,000 robot transitions. Both were evaluated on 2,000 held-out robot transitions.
+
+| Model | Position MSE | Velocity MSE | Overall MSE |
+|---|---:|---:|---:|
+| Vehicle model, zero-shot | 0.0020752 | 0.0037739 | 0.0029245 |
+| Robot model, target-trained | 0.0149619 | 0.0048980 | 0.0099300 |
+| Robot analytical physics | 0.0000000 | 0.0000000 | 0.0000000 |
+
+In this particular synthetic test, the vehicle-trained model had lower prediction error than the robot-only neural model despite not seeing robot training examples. This is an interesting result, but the comparison is not yet a fair test of transfer benefit: source and target training sample counts differ, and we have not compared against matched target-data budgets or multiple target test seeds. The exact robot physics baseline remains best because it matches the simulator equations.
