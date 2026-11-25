@@ -1,0 +1,48 @@
+{
+    "experiment": "PI-001",
+    "environment": "2D simplified vehicle",
+    "training_samples": 10000,
+    "test_samples_per_seed": 2000,
+    "training_seed": 42,
+    "results": [
+        {
+            "test_seed": 101,
+            "physics": {
+                "position_mse": 0.0,
+                "velocity_mse": 0.0,
+                "overall_mse": 0.0
+            },
+            "random_forest": {
+                "position_mse": 0.12396599409150051,
+                "velocity_mse": 0.12442152966915987,
+                "overall_mse": 0.12419376188033018
+            }
+        },
+        {
+            "test_seed": 202,
+            "physics": {
+                "position_mse": 0.0,
+                "velocity_mse": 0.0,
+                "overall_mse": 0.0
+            },
+            "random_forest": {
+                "position_mse": 0.128506200586352,
+                "velocity_mse": 0.12292053521385198,
+                "overall_mse": 0.12571336790010199
+            }
+        },
+        {
+            "test_seed": 303,
+            "physics": {
+                "position_mse": 0.0,
+                "velocity_mse": 0.0,
+                "overall_mse": 0.0
+            },
+            "random_forest": {
+                "position_mse": 0.12228203625713573,
+                "velocity_mse": 0.12857337083394463,
+                "overall_mse": 0.12542770354554017
+            }
+        }
+    ]
+}
